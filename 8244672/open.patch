@@ -1,0 +1,10 @@
+--- old/src/hotspot/share/jvmci/vmStructs_jvmci.cpp	2020-05-11 16:24:26.000000000 +0200
++++ new/src/hotspot/share/jvmci/vmStructs_jvmci.cpp	2020-05-11 16:24:26.000000000 +0200
+@@ -540,6 +540,7 @@
+   declare_constant(FieldInfo::field_slots)                                \
+                                                                           \
+   declare_constant(InstanceKlass::linked)                                 \
++  declare_constant(InstanceKlass::being_initialized)                      \
+   declare_constant(InstanceKlass::fully_initialized)                      \
+   declare_constant(InstanceKlass::_misc_is_anonymous)                     \
+                                                                           \

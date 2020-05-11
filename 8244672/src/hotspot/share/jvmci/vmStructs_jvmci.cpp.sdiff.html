@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta charset="utf-8">
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="-1" />
+<!--
+   Note to customizers: the body of the webrev is IDed as SUNWwebrev
+   to allow easy overriding by users of webrev via the userContent.css
+   mechanism available in some browsers.
+
+   For example, to have all "removed" information be red instead of
+   brown, set a rule in your userContent.css file like:
+
+       body#SUNWwebrev span.removed { color: red ! important; }
+-->
+<style type="text/css" media="screen">
+body {
+    background-color: #eeeeee;
+}
+hr {
+    border: none 0;
+    border-top: 1px solid #aaa;
+    height: 1px;
+}
+div.summary {
+    font-size: .8em;
+    border-bottom: 1px solid #aaa;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+div.summary h2 {
+    margin-bottom: 0.3em;
+}
+div.summary table th {
+    text-align: right;
+    vertical-align: top;
+    white-space: nowrap;
+}
+span.lineschanged {
+    font-size: 0.7em;
+}
+span.oldmarker {
+    color: red;
+    font-size: large;
+    font-weight: bold;
+}
+span.newmarker {
+    color: green;
+    font-size: large;
+    font-weight: bold;
+}
+span.removed {
+    color: brown;
+}
+span.changed {
+    color: blue;
+}
+span.new {
+    color: blue;
+    font-weight: bold;
+}
+a.print { font-size: x-small; }
+
+</style>
+
+<style type="text/css" media="print">
+pre { font-size: 0.8em; font-family: courier, monospace; }
+span.removed { color: #444; font-style: italic }
+span.changed { font-weight: bold; }
+span.new { font-weight: bold; }
+span.newmarker { font-size: 1.2em; font-weight: bold; }
+span.oldmarker { font-size: 1.2em; font-weight: bold; }
+a.print {display: none}
+hr { border: none 0; border-top: 1px solid #aaa; height: 1px; }
+</style>
+
+<title>open Sdiff src/hotspot/share/jvmci </title>
+</head><body id="SUNWwebrev">
+<center>&lt prev <a href='../../../../index.html' target='_top'>index</a> next &gt</center>
+<h2>src/hotspot/share/jvmci/vmStructs_jvmci.cpp</h2>
+<a class="print" href="javascript:print()">Print this page</a>
+<pre></pre>
+
+<table><tr valign="top">
+<td><pre>
+
+</pre><hr></hr><pre>
+ 523   declare_constant(Deoptimization::Reason_loop_limit_check)               \
+ 524   declare_constant(Deoptimization::Reason_type_checked_inlining)          \
+ 525   declare_constant(Deoptimization::Reason_optimized_type_check)           \
+ 526   declare_constant(Deoptimization::Reason_aliasing)                       \
+ 527   declare_constant(Deoptimization::Reason_transfer_to_interpreter)        \
+ 528   declare_constant(Deoptimization::Reason_not_compiled_exception_handler) \
+ 529   declare_constant(Deoptimization::Reason_unresolved)                     \
+ 530   declare_constant(Deoptimization::Reason_jsr_mismatch)                   \
+ 531   declare_constant(Deoptimization::Reason_LIMIT)                          \
+ 532   declare_constant(Deoptimization::_support_large_access_byte_array_virtualization)               \
+ 533                                                                           \
+ 534   declare_constant(FieldInfo::access_flags_offset)                        \
+ 535   declare_constant(FieldInfo::name_index_offset)                          \
+ 536   declare_constant(FieldInfo::signature_index_offset)                     \
+ 537   declare_constant(FieldInfo::initval_index_offset)                       \
+ 538   declare_constant(FieldInfo::low_packed_offset)                          \
+ 539   declare_constant(FieldInfo::high_packed_offset)                         \
+ 540   declare_constant(FieldInfo::field_slots)                                \
+ 541                                                                           \
+ 542   declare_constant(InstanceKlass::linked)                                 \
+
+ 543   declare_constant(InstanceKlass::fully_initialized)                      \
+ 544   declare_constant(InstanceKlass::_misc_is_anonymous)                     \
+ 545                                                                           \
+ 546   declare_constant(JumpData::taken_off_set)                               \
+ 547   declare_constant(JumpData::displacement_off_set)                        \
+ 548                                                                           \
+ 549   declare_preprocessor_constant("JVMCIEnv::ok",                   JVMCI::ok)                      \
+ 550   declare_preprocessor_constant("JVMCIEnv::dependencies_failed",  JVMCI::dependencies_failed)     \
+ 551   declare_preprocessor_constant("JVMCIEnv::dependencies_invalid", JVMCI::dependencies_invalid)    \
+ 552   declare_preprocessor_constant("JVMCIEnv::cache_full",           JVMCI::cache_full)              \
+ 553   declare_preprocessor_constant("JVMCIEnv::code_too_large",       JVMCI::code_too_large)          \
+ 554   declare_constant(JVMCIRuntime::none)                                    \
+ 555   declare_constant(JVMCIRuntime::by_holder)                               \
+ 556   declare_constant(JVMCIRuntime::by_full_signature)                       \
+ 557                                                                           \
+ 558   declare_constant(Klass::_lh_neutral_value)                              \
+ 559   declare_constant(Klass::_lh_instance_slow_path_bit)                     \
+ 560   declare_constant(Klass::_lh_log2_element_size_shift)                    \
+ 561   declare_constant(Klass::_lh_log2_element_size_mask)                     \
+ 562   declare_constant(Klass::_lh_element_type_shift)                         \
+
+</pre><hr></hr>
+</pre></td><td><pre>
+
+</pre><hr></hr><pre>
+ 523   declare_constant(Deoptimization::Reason_loop_limit_check)               \
+ 524   declare_constant(Deoptimization::Reason_type_checked_inlining)          \
+ 525   declare_constant(Deoptimization::Reason_optimized_type_check)           \
+ 526   declare_constant(Deoptimization::Reason_aliasing)                       \
+ 527   declare_constant(Deoptimization::Reason_transfer_to_interpreter)        \
+ 528   declare_constant(Deoptimization::Reason_not_compiled_exception_handler) \
+ 529   declare_constant(Deoptimization::Reason_unresolved)                     \
+ 530   declare_constant(Deoptimization::Reason_jsr_mismatch)                   \
+ 531   declare_constant(Deoptimization::Reason_LIMIT)                          \
+ 532   declare_constant(Deoptimization::_support_large_access_byte_array_virtualization)               \
+ 533                                                                           \
+ 534   declare_constant(FieldInfo::access_flags_offset)                        \
+ 535   declare_constant(FieldInfo::name_index_offset)                          \
+ 536   declare_constant(FieldInfo::signature_index_offset)                     \
+ 537   declare_constant(FieldInfo::initval_index_offset)                       \
+ 538   declare_constant(FieldInfo::low_packed_offset)                          \
+ 539   declare_constant(FieldInfo::high_packed_offset)                         \
+ 540   declare_constant(FieldInfo::field_slots)                                \
+ 541                                                                           \
+ 542   declare_constant(InstanceKlass::linked)                                 \
+<span class="new"> 543   declare_constant(InstanceKlass::being_initialized)                      \</span>
+ 544   declare_constant(InstanceKlass::fully_initialized)                      \
+ 545   declare_constant(InstanceKlass::_misc_is_anonymous)                     \
+ 546                                                                           \
+ 547   declare_constant(JumpData::taken_off_set)                               \
+ 548   declare_constant(JumpData::displacement_off_set)                        \
+ 549                                                                           \
+ 550   declare_preprocessor_constant("JVMCIEnv::ok",                   JVMCI::ok)                      \
+ 551   declare_preprocessor_constant("JVMCIEnv::dependencies_failed",  JVMCI::dependencies_failed)     \
+ 552   declare_preprocessor_constant("JVMCIEnv::dependencies_invalid", JVMCI::dependencies_invalid)    \
+ 553   declare_preprocessor_constant("JVMCIEnv::cache_full",           JVMCI::cache_full)              \
+ 554   declare_preprocessor_constant("JVMCIEnv::code_too_large",       JVMCI::code_too_large)          \
+ 555   declare_constant(JVMCIRuntime::none)                                    \
+ 556   declare_constant(JVMCIRuntime::by_holder)                               \
+ 557   declare_constant(JVMCIRuntime::by_full_signature)                       \
+ 558                                                                           \
+ 559   declare_constant(Klass::_lh_neutral_value)                              \
+ 560   declare_constant(Klass::_lh_instance_slow_path_bit)                     \
+ 561   declare_constant(Klass::_lh_log2_element_size_shift)                    \
+ 562   declare_constant(Klass::_lh_log2_element_size_mask)                     \
+ 563   declare_constant(Klass::_lh_element_type_shift)                         \
+
+</pre><hr></hr>
+</pre></td>
+</tr></table>
+<center>&lt prev <a href='../../../../index.html' target='_top'>index</a> next &gt</center>
+</body></html>
